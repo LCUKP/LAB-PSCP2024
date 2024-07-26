@@ -2,22 +2,17 @@
 def sauce(num1,num2) :
     """sauce"""
     if num1 < num2:
-        return num1,num2
-    return num2,num1
-
+        return num2
+    return num1
 def main():
     """main"""
-    num1 = int(input())
-    num2 = int(input())
-    ant = int(input())
-    mid, giant = sauce(num1,num2)
-    if ant > giant:
-        backup = ant
-        ant = mid
-        mid = giant
-        giant = backup
-    elif ant > mid:
-        mid,ant = ant,mid
-    print(f"{giant}{mid}{ant}")
+    num1 = input()
+    num2 = input()
+    num3 = input()
+    mak = sauce(num1+num2+num3,num1+num3+num2)
+    mak = sauce(mak,num2+num3+num1)
+    mak = sauce(mak,num2+num1+num3)
+    mak = sauce(mak,num3+num1+num2)
+    mak = sauce(mak,num3+num2+num1)
+    print(int(mak))
 main()
-# False
