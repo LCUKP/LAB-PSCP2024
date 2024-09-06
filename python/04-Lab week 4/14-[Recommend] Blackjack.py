@@ -15,10 +15,10 @@ def main(num = int(input())):
     if len(tmp) > 1 :
         bsckjack += 1
         tmp = tmp[:-1]
-    for i in range(len(tmp)) :
-        if tmp[i] == "A" and 11 + bsckjack <= 21 :
+    for i in tmp :
+        if i == "A" and 11 + bsckjack <= 21 :
             bsckjack += 11
-        elif tmp[i] == "A" and 11 + bsckjack > 21 :
+        elif i == "A" and 11 + bsckjack > 21 :
             bsckjack += 1
     print(bsckjack)
 main()
