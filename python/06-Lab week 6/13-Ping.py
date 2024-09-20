@@ -1,4 +1,4 @@
-"""Ping ไม่ผ่าน 1 เทสเคส"""
+"""Ping"""
 import math
 def slicing(text, maxn, minn, time="") :
     """find ms"""
@@ -31,7 +31,7 @@ def main() :
     else :
         pinging = pinging[pinging.find(" ")+1:pinging.find(" ",pinging.find(" ")+1)]
     if not received :
-        print(f"Ping statistics for {pinging}")
+        print(f"Ping statistics for {pinging}:")
         print(f"    Packets: Sent = 4, Received = 0, Lost = 4 ({int((lost*100)/4)}% loss),")
     else :
         print(f"Ping statistics for {pinging}:")
@@ -40,4 +40,3 @@ def main() :
         print("Approximate round trip times in milli-seconds:")
         print(f"    Minimum = {minn}ms, Maximum = {maxn}ms, Average = {int(avg/received)}ms")
 main()
-# Ping ผิด 1 เทสเคส วันไนท์มิราเคลิไม่มีจริง เราคงต้องจากการ (T-T)
