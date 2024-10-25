@@ -1,0 +1,13 @@
+"""Fever"""
+def main() :
+    """Fever"""
+    ongsa = float(input())
+    if ongsa < 38 :
+        print("No Fever")
+    elif ongsa < 39 :
+        print("Mild Fever")
+    elif ongsa < 40 :
+        print("High Fever")
+    elif ongsa >= 40 :
+        print("Very High Fever")
+main()
